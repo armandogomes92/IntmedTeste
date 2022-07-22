@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-91@v5bd_53_syfe!9a)5zyi7fnd&08ruvngnrw2glh9s0p_!$u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['medicar.azurewebsites.net']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'medicar'
 ]
 
@@ -80,9 +81,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'MedicarDB',
-        'USER': 'medicar@medicarserver',
+        'USER': 'medicar@medicar',
         'PASSWORD': 'Admin123!@#',
-        'HOST': 'medicarserver.postgres.database.azure.com'
+        'HOST': 'medicar.postgres.database.azure.com'
     }
 }
 
