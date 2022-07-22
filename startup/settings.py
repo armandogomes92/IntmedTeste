@@ -76,12 +76,13 @@ WSGI_APPLICATION = 'startup.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Medicar',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost'
+        'NAME': 'MedicarDB',
+        'USER': 'medicar@medicarserver',
+        'PASSWORD': 'Admin123!@#',
+        'HOST': 'medicarserver.postgres.database.azure.com'
     }
 }
 

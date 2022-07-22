@@ -28,7 +28,7 @@ class Agenda(models.Model):
         return str(self.dia)
 
 class Horario(models.Model):
-    agenda = models.ForeignKey(Agenda, models.CASCADE)
+    agenda = models.ForeignKey(Agenda, models.CASCADE, related_name='horarios')
     horario = models.TimeField()
     agendado = models.BooleanField(default=False)
     class Meta:
@@ -38,10 +38,10 @@ class Horario(models.Model):
         return str(self.horario)
 
 class Consulta(models.Model):
+    agenda = models.ForeignKey(Agenda, models.CASCADE)
     dia = models.DateField()
     horario = models.TimeField()
     data_agendamento = models.DateTimeField(auto_now_add=True)
-    agenda = models.ForeignKey(Agenda, models.CASCADE)
 
     def __str__(self) -> str:
         return str(self.dia)

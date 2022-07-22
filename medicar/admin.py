@@ -8,8 +8,13 @@ class Medicos(admin.ModelAdmin):
     search_fields = ('nome', 'crm')
     list_per_page = 20
 
+class Agendas(admin.ModelAdmin):
+    list_display = ('id', 'medico', 'dia')
+    list_display_links = ('id', 'medico')
+    list_per_page = 20 
+
 admin.site.register(Medico, Medicos)
 
-admin.site.register(Agenda)
+admin.site.register(Agenda, Agendas)
 
 admin.site.register(Horario)

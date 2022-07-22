@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-
-from medicar.views import ConsultasView
+from medicar.views import AgendaView, ConsultasView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('consultas', ConsultasView.as_view())
+    re_path('consultas', ConsultasView.as_view()),
+    #re_path('consultas/<int:id>/', deletar_consulta),
+    re_path('agendas', AgendaView.as_view()),
 ]

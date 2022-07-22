@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/be6daed6-0e4e-40f7-9e34-6181ffdb01c2/microsoft.web/sites/subscriptions/be6daed6-0e4e-40f7-9e34-6181ffdb01c2/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/medicar",
+    "appService.deploySubpath": "."
+}
