@@ -32,7 +32,6 @@ class ConsultasView(APIView):
         return Response(serializer.data)
 
     def delete(self, request, *args, **kwargs):
-        print(request.GET.get('id'))
         try:
             consulta = self.get_queryset().get()
         except:

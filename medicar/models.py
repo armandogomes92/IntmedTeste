@@ -1,13 +1,4 @@
-import email
-from enum import unique
-from hashlib import blake2b
-from pickle import FALSE
-from re import T
-from tkinter import CASCADE
 from django.db import models
-from django.forms import EmailField, IntegerField
-
-
 
 class Medico(models.Model):
     nome = models.CharField(max_length=35)
